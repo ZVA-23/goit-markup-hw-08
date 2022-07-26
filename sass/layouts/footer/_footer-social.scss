@@ -1,8 +1,20 @@
 .footer__join {
-    margin-top: 10px;
-    margin-left: 70px;
-    width: 206px;
-    height: 80px;
+    @include mq(mob) {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    @include mq(tab) {
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+
+    @include mq(desk) {
+        margin-top: 12px;
+        margin-left: 70px;
+        width: 206px;
+        height: 80px;
+    }
 }
 
 .footer__join-name {
@@ -18,8 +30,17 @@
 }
 
 .footer__social-list {
-    display: flex;
     gap: 10px;
+    
+    @include mq(mob) {
+        display: flex;
+        justify-content: center;
+    }
+
+    @include mq(desk) {
+        display: flex;
+    
+    }
 }
 
 .footer__social-link {
@@ -37,7 +58,7 @@
     &:hover,
     &:focus {
         background-color: var(--accent-color);
-        }
+    }
 }
 
 

@@ -1,8 +1,29 @@
 .footer__contact {
+    @include mq(mob-only) {
+        text-align: center;
+    }
+
+    @include mq(tab-only) {
+        text-align: center;
+    }
 
     @include mq(desk) {
         display: flex;
         align-items: stretch;
+    }
+}
+
+.footer__contact-join {
+    @include mq(tab) {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 60px;
+    }
+
+    @include mq(desk) {
+        display: flex;
+        align-items: stretch;
+        margin-bottom: 0;
     }
 }
 
@@ -11,11 +32,15 @@
 }
 
 .footer__contact-item {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
 
     &:last-child {
         margin-bottom: 0;
-        }
+    }
+
+    @include mq(desk) {
+        margin-bottom: 9px;
+    }
 }
 
 
@@ -36,5 +61,5 @@
     &:hover,
     &:focus {
         color: var(--accent-color);
-        }
+    }
 }
