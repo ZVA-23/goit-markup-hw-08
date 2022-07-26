@@ -1,5 +1,6 @@
 .clients__list {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
@@ -8,7 +9,7 @@
     align-items: center;
     justify-content: center;
 
-    width: 170px;
+    width: 210px;
     height: 92px;
     fill: #AFB1B8;
 
@@ -17,6 +18,14 @@
 
     transition: fill var(--anim-slov),
         border var(--anim-slov);
+
+        @include mq(tab) {
+                width: 226px;
+            }
+        
+            @include mq(desk) {
+                width: 170px;
+            }
 
     &:hover {
         fill: var(--accent-color);

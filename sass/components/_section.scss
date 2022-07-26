@@ -1,16 +1,28 @@
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    outline: 1px solid gold;
+
+    @include mq(desk) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 
     &__title {
         margin-top: 0;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         color: var(--title-text-color);
     
         font-weight: 700;
-        font-size: 36px;
+        font-size: 28px;
         line-height: 1.17;
         text-align: center;
+
+        @include mq(desk) {
+            font-size: 36px;
+            margin-bottom: 50px;
         }
+    }
 }
 

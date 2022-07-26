@@ -340,17 +340,30 @@ html {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  outline: 1px solid gold;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .section__title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: var(--title-text-color);
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .section__title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 .logo {
@@ -1101,6 +1114,8 @@ label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 30px;
 }
 
@@ -1114,13 +1129,23 @@ label {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 170px;
+  width: 210px;
   height: 92px;
   fill: #AFB1B8;
   border: 1px solid rgb(175, 177, 184);
   border-radius: 4px;
   -webkit-transition: fill var(--anim-slov), border var(--anim-slov);
   transition: fill var(--anim-slov), border var(--anim-slov);
+}
+@media screen and (min-width: 768px) {
+  .clients__list-item {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__list-item {
+    width: 170px;
+  }
 }
 .clients__list-item:hover {
   fill: var(--accent-color);
