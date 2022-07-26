@@ -1,0 +1,37 @@
+.footer__contact {
+    display: flex;
+    align-items: stretch;
+}
+
+.footer__contact-info {
+    margin-top: 20px;
+}
+
+.footer__contact-item {
+    margin-bottom: 9px;
+
+    &:last-child {
+        margin-bottom: 0;
+        }
+}
+
+
+
+.footer__contact-link {
+    color: var(--primary-white-color);
+
+    line-height: 1.71;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.footer__contact-link--current {
+    color: var(--secondary-white-color);
+
+    transition: color var(--anim-slov);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+        }
+}

@@ -1,0 +1,26 @@
+.clients__list {
+    display: flex;
+    gap: 30px;
+}
+
+.clients__list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 170px;
+    height: 92px;
+    fill: #AFB1B8;
+
+    border: 1px solid rgba(175, 177, 184, 1);
+    border-radius: 4px;
+
+    transition: fill var(--anim-slov),
+        border var(--anim-slov);
+
+    &:hover {
+        fill: var(--accent-color);
+        border: 1px solid var(--accent-color);
+        }
+}
+
