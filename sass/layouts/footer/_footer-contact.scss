@@ -1,6 +1,9 @@
 .footer__contact {
-    display: flex;
-    align-items: stretch;
+
+    @include mq(desk) {
+        display: flex;
+        align-items: stretch;
+    }
 }
 
 .footer__contact-info {

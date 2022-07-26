@@ -1,8 +1,12 @@
 .works {
+    @include mq(mob) {
+        display: none;
+    }
+
     @include mq(desk) {
-            padding-top: 0;
-        }
-    
+        display: flex;
+        padding-top: 0;
+        }    
 }
 
 .works__list {

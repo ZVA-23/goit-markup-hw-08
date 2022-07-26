@@ -995,8 +995,16 @@ label {
   line-height: 1.71;
 }
 
+@media screen and (min-width: 480px) {
+  .works {
+    display: none;
+  }
+}
 @media screen and (min-width: 1200px) {
   .works {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     padding-top: 0;
   }
 }
@@ -1041,16 +1049,47 @@ label {
   background-color: #F5F4FA;
 }
 
-.team__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 30px;
+@media screen and (min-width: 768px) {
+  .team__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .team__list-item {
-  width: calc((100% - 90px) / 4);
   background-color: var(--primary-white-color);
+}
+@media screen and (max-width: 767.98px) {
+  .team__list-item {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team__list-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__list-item {
+    width: calc((100% - 90px) / 4);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team__list-img {
+    width: 354px;
+    height: 374px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__list-img {
+    width: 270px;
+    height: 280px;
+  }
 }
 
 .team__card {
@@ -1084,9 +1123,21 @@ label {
   display: -ms-flexbox;
   display: flex;
   margin-top: 16px;
-  margin-left: 32px;
-  margin-right: 32px;
+  margin-left: 122px;
+  margin-right: 122px;
   gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  .team__social {
+    margin-left: 74px;
+    margin-right: 74px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__social {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
 }
 
 .team__social-link {
@@ -1241,13 +1292,15 @@ label {
   background-color: #2F303A;
 }
 
-.footer__contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+@media screen and (min-width: 1200px) {
+  .footer__contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
 }
 
 .footer__contact-info {
