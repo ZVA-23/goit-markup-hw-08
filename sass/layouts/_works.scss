@@ -1,19 +1,27 @@
 .works {
-    padding-top: 0;
+    @include mq(desk) {
+            padding-top: 0;
+        }
+    
 }
 
 .works__list {
+    @include mq(desk) {
     display: flex;
     gap: 30px;
+    }
 }
 
 .works__list-item {
+    @include mq(desk) {
     position: relative;
     overflow: hidden;
     width: 370px;
+    }
 }
 
 .works__list-label {
+    @include mq(desk) {
     position: absolute;
     font-weight: 700;
     font-size: 14px;
@@ -31,4 +39,5 @@
     bottom: 0;
     left: 0;
     width: 100%;
+    }
 }
