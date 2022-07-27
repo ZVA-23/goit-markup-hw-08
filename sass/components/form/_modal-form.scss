@@ -1,216 +1,214 @@
 label {
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .subscription__title {
-    margin-top: 40px;
-    margin-bottom: 12px;
+  margin-top: 40px;
+  margin-bottom: 12px;
 
-    font-size: 20px;
-    line-height: 1.15;
-    text-align: center;
-    letter-spacing: 0.03em;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
 
-    color: var(--title-text-color);
+  color: var(--title-text-color);
 
-    @include mq(mob) {
+  @include mq(mob) {
     width: 370px;
     margin-left: auto;
     margin-right: auto;
-    }
+  }
 }
 
 .subscription__form {
-    width: 528px;
-    height: 581px;
+  width: 528px;
+  height: 581px;
 }
 
 .subscription__group {
-    width: 448px;
-    height: 342px;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-bottom: 20px;
-    /* gap: 10px; */
+  width: 448px;
+  height: 342px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+  /* gap: 10px; */
 }
 
 .subscription__field {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
 
-    &:last-child {
-        margin-bottom: 0px;
-    }
+  &:last-child {
+    margin-bottom: 0px;
+  }
 }
 
 .subscription__name {
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
-    color: var(--primari-text-color);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--primari-text-color);
 
-    margin-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 .subscription__input {
-    display: inline-block;
-    width: 100%;
-    height: 40px;
-    padding-left: 42px;
-    font-family: inherit;
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  font-family: inherit;
 
-    border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+
+  transition: border var(--anim-slov);
+
+  &:focus {
+    border: 1px solid var(--accent-color);
     border-radius: 4px;
-    outline: transparent;
+  }
 
-    transition: border var(--anim-slov);
+  @include mq(mob-only) {
+    width: 370px;
+  }
 
-    &:focus {
-        border: 1px solid var(--accent-color);
-        border-radius: 4px;
-        }
-
-        @include mq(mob-only) {
-            width: 370px;
-        }
-
-        @include mq(tab-only) {
-            width: 370px;
-        }
+  @include mq(tab-only) {
+    width: 370px;
+  }
 }
 
 .subscription__input:focus,
 .subscription__textarea:focus {
-    border: 1px solid var(--accent-color);
-    border-radius: 4px;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
 }
 
-.subscription__input:focus+.subscription__input-icon {
-    fill: var(--accent-color);
+.subscription__input:focus + .subscription__input-icon {
+  fill: var(--accent-color);
 }
 
 .subscription__input-icon {
-    position: absolute;
-    display: inline-block;
-    flex-shrink: 0;
-    top: 29px;
-    left: 12px;
+  position: absolute;
+  display: inline-block;
+  flex-shrink: 0;
+  top: 29px;
+  left: 12px;
 
-    transition: fill var(--anim-slov);
+  transition: fill var(--anim-slov);
 }
 
 .subscription__textarea {
-    display: inline-block;
-    resize: none;
-    width: 448px;
-    height: 120px;
-    padding: 12px 16px;
-    width: 100%;
-    
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5); 
+  display: inline-block;
+  resize: none;
+  width: 448px;
+  height: 120px;
+  padding: 12px 16px;
+  width: 100%;
 
-    border: 1px solid rgba(33, 33, 33, 0.2);
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+
+  transition: border var(--anim-slov);
+
+  &:focus {
+    border: 1px solid var(--accent-color);
     border-radius: 4px;
-    outline: transparent;
+  }
 
-    transition: border var(--anim-slov);
+  @include mq(mob-only) {
+    width: 370px;
+  }
 
-    
-    &:focus {
-        border: 1px solid var(--accent-color);
-        border-radius: 4px;
-        }
-
-    // @include mq(mob-only) {
-    //     width: 370px;
-    // }
-    
-    // @include mq(tab-only) {
-    //     width: 370px;
-    // }
+  @include mq(tab-only) {
+    width: 370px;
+  }
 }
 
 .subscription__contract-flied {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 7px;
-    margin-top: 20px;
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .subscription__contract-check {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 16px;
-    height: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 15px;
 
-    outline: 2px solid #000000;
-    outline-offset: -2px;
-    border-radius: 2px;
+  outline: 2px solid #000000;
+  outline-offset: -2px;
+  border-radius: 2px;
 
-    transition: outline var(--anim-slov),
-        background-color var(--anim-slov);
+  transition: outline var(--anim-slov), background-color var(--anim-slov);
 }
 
-.subscription__contract-input:checked+.subscription__contract-check {
-    outline: var(--accent-color);
-    background-color: var(--accent-color);
+.subscription__contract-input:checked + .subscription__contract-check {
+  outline: var(--accent-color);
+  background-color: var(--accent-color);
 }
 
 .subscription__contract {
-    @include mq(mob) {
-        font-size: 12px;
-        line-height: 1.17;
-        letter-spacing: 0.03em;
-    }
+  @include mq(mob) {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+  }
 
-    @include mq(desk) {
-        line-height: 1.71;     
-    }
+  @include mq(desk) {
+    line-height: 1.71;
+  }
 }
 
 .subscription__contract-name {
-    color: var(--accent-color);
-    @include mq(mob) {
-        font-size: 12px;
-        line-height: 1.17;
-        letter-spacing: 0.03em;
-    }
-    
-    @include mq(desk) {
-        line-height: 1.71;
-    }
+  color: var(--accent-color);
+  @include mq(mob) {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+  }
+
+  @include mq(desk) {
+    line-height: 1.71;
+  }
 }
 
 .subscription__form-btn {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    font-family: inherit;
-    cursor: pointer;
-    margin-bottom: 40px;
-    margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: inherit;
+  cursor: pointer;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
 
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
 
-    color: var(--primary-white-color);
-    background-color: var(--accent-color);
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
 
-    border: 1px solid transparent;
-    border-radius: 4px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    padding: 10px 52px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 10px 52px;
 }

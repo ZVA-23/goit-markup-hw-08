@@ -1,98 +1,91 @@
 .hero {
-    padding: 200px 0;
+  padding: 200px 0;
 }
 
 .hero__title {
-    margin-top: 0;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 
-    color: var(--primary-white-color);
+  color: var(--primary-white-color);
 
-    font-weight: 900;
-    font-size: 26px;
-    line-height: 1.62;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
 
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 
-    @include mq(desk) {
+  @include mq(desk) {
     width: 696px;
     font-size: 44px;
     line-height: 1.36;
-    }
+  }
 }
 
 .hero__overlay {
-    // max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-    background-size: cover;
-    
-    // mobile screen
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4)), rgba((47, 48, 58, 0.4))
+  // max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+
+  // mobile screen
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../image/hero/hero_sm.jpg);
 
+  // mobile retina screen
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../image/hero/hero_sm@2x.jpg);
+  }
 
-    // mobile retina screen
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4)),
-        rgba((47, 48, 58, 0.4)) url(../image/hero/hero_sm@2x.jpg);
-    }
-
-    // tablet screen
-    @media screen and (min-width: 768px) {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4)),
-        rgba((47, 48, 58, 0.4)) url(../image/hero/hero_md.jpg);
+  // tablet screen
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../image/hero/hero_md.jpg);
 
     // tablet retina screen
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4)),
-        rgba((47, 48, 58, 0.4)) url(../image/hero/hero_md@2x.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../image/hero/hero_md@2x.jpg);
     }
-    }
+  }
 
-    // desktop screen
-    @media screen and (min-width: 1200px) {
-        background-image: linear-gradient(rgba(47, 48, 58, 0.4)),
-            rgba((47, 48, 58, 0.4)) url(../image/hero/hero_lg.jpg);
+  // desktop screen
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../image/hero/hero_lg.jpg);
 
     // desktop retina screen
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4)),
-        rgba((47, 48, 58, 0.4)) url(../image/hero/hero_lg@2x.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../image/hero/hero_lg@2x.jpg);
     }
-    }
+  }
 
-    // background-image: url("../image/overlay.png"), url("../image/hero.jpg"), url("../image/bg.png");
-    border: 1px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  // background-image: url("../image/overlay.png"), url("../image/hero.jpg"), url("../image/bg.png");
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .hero__btn {
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 4px;
-    padding: 10px 32px;
-    border: 1px solid transparent;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+  padding: 10px 32px;
+  border: 1px solid transparent;
 
-    background-color: var(--accent-color);
-    color: var(--primary-white-color);
-    font-family: inherit;
-    cursor: pointer;
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+  font-family: inherit;
+  cursor: pointer;
 
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.06em;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
 }
