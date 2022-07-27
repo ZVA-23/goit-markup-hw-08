@@ -12,15 +12,26 @@
   }
 }
 
-.menu.is-hidden {
+.menu__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
 }
 
 .menu__list {
-  margin-bottom: 302px;
+  margin-bottom: auto;
+}
+
+.menu__item:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 .menu__contact-list {
   margin-bottom: 64px;
+}
+
+.menu__contact-item:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 .menu__link {
@@ -63,6 +74,7 @@
 
 .menu__cosial-list {
   display: flex;
+  gap: 10px;
 }
 
 .menu__social-link {
@@ -72,21 +84,26 @@
   letter-spacing: 0.02em;
   text-decoration: none;
   color: #2196f3;
+  border-radius: 1px solid black;
+  padding-right: 10px;
+  border-right: var(--accent-color);
 }
 
 .menu__btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
   display: flex;
   align-items: center;
   font-family: inherit;
   cursor: pointer;
+  border: none;
   width: 40px;
   height: 40px;
   justify-content: center;
   background-color: var(--primary-white-color);
 
   padding: 5px;
-  margin-left: auto;
-  margin-right: auto;
 
   font-style: normal;
   font-weight: 700;
