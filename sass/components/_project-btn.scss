@@ -1,8 +1,17 @@
 .project__btn {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     margin-bottom: 50px;
     gap: 8px;
+
+    @include mq(mob) {
+        flex-wrap: wrap;
+        
+    }
+
+    @include mq(tab) {
+    justify-content: center;  
+    }
 }
 
 .project__btn-primary {

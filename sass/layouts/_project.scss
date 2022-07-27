@@ -1,12 +1,33 @@
 .project__card {
-    display: flex;
-    flex-wrap: wrap;
+    background-color: var(--primary-white-color);
     gap: 30px;
 
-    background-color: var(--primary-white-color);
+    @include mq(tab) {
+    display: flex;
+    flex-wrap: wrap;
+    }
 }
 
 .project__card-item {
+    display: flex;
+    flex-direction: column;
+
+
+    @include mq(mob-only) {
+        margin-bottom: 30px;
+    }
+
+    &:last-child {
+        @include mq(mob-only) {
+            margin-bottom: 0;
+        }
+    }
+
+    @include mq(tab) {
+        width: calc((100% - 1 * 30px) / 2);
+    }
+
+    @include mq(desk) {
     width: calc((100% - 2 * 30px) / 3);
 
     transition: color var(--anim-slov);
@@ -18,6 +39,7 @@
             0px 4px 4px rgba(0, 0, 0, 0.06),
             1px 4px 6px rgba(0, 0, 0, 0.16);
         }
+    }
 }
 
 .project__card-item:hover .project__card-overlay,
@@ -28,6 +50,18 @@
 .project__card-trum {
     position: relative;
     overflow: hidden;
+}
+
+.project__card-img {
+    @include mq(tab) {
+        width: 354px;
+        height: 294px;
+    }
+
+    @include mq(desk) {
+        width: 370px;
+        height: 294px;
+    }
 }
 
 .project__card-overlay {
@@ -51,14 +85,14 @@
 }
 
 .project__card-content {
+    flex-grow: 1;
     border: 1px solid #EEEEEE;
     border-top: transparent;
-    padding: 20px 24px;
-
-    
+    padding: 20px 24px;    
 }
 
 .project__card-name {
+
     margin-top: 0;
     margin-bottom: 4px;
 

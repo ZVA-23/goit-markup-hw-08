@@ -13,6 +13,12 @@ label {
     letter-spacing: 0.03em;
 
     color: var(--title-text-color);
+
+    @include mq(mob) {
+    width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+    }
 }
 
 .subscription__form {
@@ -66,6 +72,14 @@ label {
         border: 1px solid var(--accent-color);
         border-radius: 4px;
         }
+
+        @include mq(mob-only) {
+            width: 370px;
+        }
+
+        @include mq(tab-only) {
+            width: 370px;
+        }
 }
 
 .subscription__input:focus,
@@ -94,6 +108,7 @@ label {
     width: 448px;
     height: 120px;
     padding: 12px 16px;
+    width: 100%;
     
     font-size: 12px;
     line-height: 14px;
@@ -111,6 +126,14 @@ label {
         border: 1px solid var(--accent-color);
         border-radius: 4px;
         }
+
+    // @include mq(mob-only) {
+    //     width: 370px;
+    // }
+    
+    // @include mq(tab-only) {
+    //     width: 370px;
+    // }
 }
 
 .subscription__contract-flied {
@@ -143,14 +166,28 @@ label {
 }
 
 .subscription__contract {
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    @include mq(mob) {
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.03em;
+    }
+
+    @include mq(desk) {
+        line-height: 1.71;     
+    }
 }
 
 .subscription__contract-name {
     color: var(--accent-color);
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    @include mq(mob) {
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.03em;
+    }
+    
+    @include mq(desk) {
+        line-height: 1.71;
+    }
 }
 
 .subscription__form-btn {

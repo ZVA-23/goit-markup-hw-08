@@ -20,7 +20,7 @@
     <!-- Header -->
     <header class="header"> 
     <!-- Nav -->
-        <!-- <div class="container header__content"> 
+        <div class="container header__content"> 
             <nav class="header__nav">
                 <a href="./index.html" class="logo">Web<span class="logo__primary">Studio</span></a>
                 <ul class="header__nav-list list">
@@ -28,9 +28,9 @@
                     <li class="header__nav-item"><a href="./portfolio.html" class="header__nav-link">Портфоліо</a></li>
                     <li class="header__nav-item"><a href="" class="header__nav-link">Контакти</a></li>
                 </ul>
-            </nav> -->
+            </nav>
     <!-- Contact -->
-            <!-- <ul class="header__contact list">
+            <ul class="header__contact list">
                 <li class="header__contact-item">
                     <a href="mailto:info@devstudio.com" class="header__contact-link">
                         <svg class="header__contact-icon" width="16" height="12">
@@ -49,17 +49,56 @@
                 </li>
             </ul>                
         </div>
-    </header> -->
+
+
+        <div class="menu is-hidden">
+            <button class="menu_btn-open" type="button">
+                <svg class="menu-icon" width="40" height="40">
+                    <use href="./image/icons.svg#menu"></use>
+                </svg>
+            </button>
+            <button class="menu_btn-close" type="button"> 
+                <svg class="menu-icon" width="40" height="40">
+                    <use href="./image/icons.svg#menu-close"></use>
+                </svg>
+            </button>
+            <div class="menu__content">
+                <ul class="menu__list list">
+                    <li class="menu__item"><a href="" class="menu__link menu__link--current">Студія</a></li>
+                    <li class="menu__item"><a href="./portfolio.html" class="menu__link">Портфоліо</a></li>
+                    <li class="menu__item"><a href="" class="menu__link">Контакти</a></li>
+                </ul>
+                <ul>
+                    <li class="menu__contact-item">
+                        <a href="mailto:info@devstudio.com" class="menu__contact-link">
+                            info@devstudio.com
+                        </a>
+                    </li>
+                    <li class="menu__contact-item">
+                        <a href="tel:+380961111111" class="menu__contact-link">
+                            +38 096 111 11 11
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="menu__social-item"><a class="menu__social-link" href="">Instagram</a>
+                    <li class="menu__social-item"><a class="menu__social-link" href="">Twitter</a>
+                    <li class="menu__social-item"><a class="menu__social-link" href="">Facebook</a>
+                    <li class="menu__social-item"><a class="menu__social-link" href="">LinkedIn</a>
+                </ul>
+            </div>
+        </div>
+    </header>
     <!-- Main -->
     <main>
     <!-- Sections -->
     <!-- Hero -->
-        <!-- <section class="hero hero__overlay">
+        <section class="hero hero__overlay">
             <div class="container">
                 <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
                 <button class="hero__btn" type="button" data-modal-open>Замовити послугу</button>
             </div>                    
-        </section> -->
+        </section>
     <!-- Features -->
         <section class="section features">
             <div class="container">
@@ -110,15 +149,39 @@
                 <h2 class="section__title">Чим ми займаємося</h2>
                 <ul class="works__list list">
                     <li class="works__list-item">
-                        <img class="works__list-img" src="./image/box1.jpg" alt="box1" width="370" height="294" />
+                        <picture>
+                            <!-- desktop screen -->
+                            <source media="(min-width: 1200px)" srcset="./image/works/works-01_lg.webp 1x, ./image/works/works-01_lg@2x.webp 2x"
+                                type="image/webp" />
+                            <source media="(min-width: 1200px)" srcset="./image/works/works-01_lg.jpg 1x, ./image/works/works-01_lg@2x.jpg 2x"
+                                type="image/jpg" />
+                            <img class="works__list-img" src="./image/works/works-01_lg.jp" alt="works1" width="370" height="294"
+                                loading="lazy" />
+                        </picture>
                         <h3 class="works__list-label">Десктопні додатки</h3>
                     </li>
                     <li class="works__list-item">
-                        <img class="works__list-img" src="./image/box2.jpg" alt="box2" width="370" height="294" />
+                        <picture>
+                            <!-- desktop screen -->
+                            <source media="(min-width: 1200px)" srcset="./image/works/works-02_lg.webp 1x, ./image/works/works-02_lg@2x.webp 2x"
+                                type="image/webp" />
+                            <source media="(min-width: 1200px)" srcset="./image/works/works-02_lg.jpg 1x, ./image/works/works-02_lg@2x.jpg 2x"
+                                type="image/jpg" />
+                            <img class="works__list-img" src="./image/works/works-02_lg.jp" alt="works2" width="370" height="294"
+                                oading="lazy" />
+                        </picture>
                         <h3 class="works__list-label">Мобільні додатки</h3>
                     </li>
                     <li class="works__list-item">
-                        <img class="works__list-img" src="./image/box3.jpg" alt="box3" width="370" height="294" />
+                        <picture>
+                            <!-- desktop screen -->
+                            <source media="(min-width: 1200px)" srcset="./image/works/works-03_lg.webp 1x, ./image/works/works-03_lg@2x.webp 2x"
+                                type="image/webp" />
+                            <source media="(min-width: 1200px)" srcset="./image/works/works-03_lg.jpg 1x, ./image/works/works-03_lg@2x.jpg 2x"
+                                type="image/jpg" />
+                            <img class="works__list-img" src="./image/works/works-03_lg.jp" alt="works3" width="370" height="294"
+                                oading="lazy" />
+                        </picture>
                         <h3 class="works__list-label">Дизайнерські рішення</h3>
                     </li>
                 </ul>
@@ -146,7 +209,7 @@
                                 type="image/webp" />
                             <source media="(max-width: 767px)" srcset="./image/teams/team-01_sm.jpg 1x, ./image/teams/team-01_sm@2x.jpg 2x"
                                 type="image/jpg" />
-                            <img class="team__list-img" src="./image/teams/team-01_sm.jpg" alt="teams 1" width="450" height="460" loading="lazy" />
+                            <img class="team__list-img" src="./image/teams/team-01_sm.jpg" alt="teams1" width="450" height="460" loading="lazy" />
                         </picture>
                         <div class="team__card">
                             <h3 class="team__card-name">Ігор Демяненко</h3>
@@ -200,7 +263,7 @@
                                 type="image/webp" />
                             <source media="(max-width: 767px)" srcset="./image/teams/team-02_sm.jpg 1x, ./image/teams/team-02_sm@2x.jpg 2x"
                                 type="image/jpg" />
-                            <img class="team__list-img" src="./image/teams/team-01_sm.jpg" alt="teams 1" width="450" height="460" loading="lazy" />
+                            <img class="team__list-img" src="./image/teams/team-02_sm.jpg" alt="teams2" width="450" height="460" loading="lazy" />
                         </picture>
                         <div class="team__card">
                             <h3 class="team__card-name">Ольга Репіна</h3>
@@ -254,7 +317,7 @@
                                 type="image/webp" />
                             <source media="(max-width: 767px)" srcset="./image/teams/team-03_sm.jpg 1x, ./image/teams/team-03_sm@2x.jpg 2x"
                                 type="image/jpg" />
-                            <img class="team__list-img" src="./image/teams/team-01_sm.jpg" alt="teams 1" width="450" height="460" loading="lazy" />
+                            <img class="team__list-img" src="./image/teams/team-03_sm.jpg" alt="teams3" width="450" height="460" loading="lazy" />
                         </picture>
                         <div class="team__card">
                             <h3 class="team__card-name">Микола Тарасов</h3>
@@ -308,7 +371,7 @@
                                 type="image/webp" />
                             <source media="(max-width: 767px)" srcset="./image/teams/team-04_sm.jpg 1x, ./image/teams/team-04_sm@2x.jpg 2x"
                                 type="image/jpg" />
-                            <img class="team__list-img" src="./image/teams/team-01_sm.jpg" alt="teams 1" width="450" height="460" loading="lazy" />
+                            <img class="team__list-img" src="./image/teams/team-04_sm.jpg" alt="teams4" width="450" height="460" loading="lazy" />
                         </picture>
                         <div class="team__card">
                             <h3 class="team__card-name">Михайло Єрмаков</h3>
@@ -460,7 +523,7 @@
     </footer>
 
     <!-- Modal window -->
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button class="modal__btn" type="button" data-modal-close>
                 <svg class="modal__btn-icon" width="18" height="18">
@@ -520,6 +583,6 @@
         </div>
     </div>
 
-    <script src="./js/modal.js"></script> -->
+    <script src="./js/modal.js"></script>
 </body>
 </html>
